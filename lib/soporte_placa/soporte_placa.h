@@ -1,0 +1,1 @@
+#ifndef SOPORTE_PLACA

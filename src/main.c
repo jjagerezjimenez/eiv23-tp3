@@ -1,6 +1,6 @@
 #include <stm32f1xx.h>
 
-#define Ciclo_pasada_lazo 8
+#define Ciclo_pasada_lazo 13
 
 
 int main(void){
@@ -44,4 +44,23 @@ int main(void){
     //
   //  }
     return 0;       // x/wx A usar en terminal para ver variable A
+}
+
+//ejemplo en aruino
+#define
+#define
+#define LED_OFF 1
+#define PULSADOR_PULSADO 0
+
+void setup(){
+    pinMose(LED_BUILTIN,OUTPUT);
+    digitalWrite(LED_BUILTIN,LED_OFF);
+    pinMode(PULSADOR,INPUT_PULLUP);
+}
+
+void loop {
+    while(digitalRead(PULSADOR) != PULSADOR_PULSADO);
+    digitalWrite(LED_BUILTIN,LED_ON)
+    delay(60000);
+    digitalWrite(LED_BUILTIN,LED_OFF)
 }
