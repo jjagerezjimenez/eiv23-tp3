@@ -1,0 +1,36 @@
+
+
+
+
+//ejemplo en aruino
+#define
+#define
+#define LED_OFF 1
+#define PULSADOR_PULSADO 0
+
+void setup(){
+    pinMose(LED_BUILTIN,OUTPUT);
+    digitalWrite(LED_BUILTIN,LED_OFF);
+    pinMode(PULSADOR,INPUT_PULLUP);
+}
+
+void loop {
+    while(digitalRead(PULSADOR) != PULSADOR_PULSADO);
+    digitalWrite(LED_BUILTIN,LED_ON)
+    delay(60000);
+    digitalWrite(LED_BUILTIN,LED_OFF)
+}
+    unsigned volatile A = 0x80000000U, B=1U<<2, C=1U<<4, D=1U<<7;
+    // bit set
+    A |= B;
+    A |= C;
+    A |= D;
+
+    //bit clear
+    A &= not(B | C);  //ver teclado
+    A &= notC;
+
+    //bit flip
+    A &= D | B;
+
+    A = 0;
