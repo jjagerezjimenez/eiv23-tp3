@@ -11,7 +11,8 @@ typedef enum BP_PuertoPin{
 
 typedef enum BP_ModoPin{
     IN_PULL_UP,
-    OUT_2MHz
+    OUT_2MHz,
+    IN
 }BP_ModoPin;
 
 

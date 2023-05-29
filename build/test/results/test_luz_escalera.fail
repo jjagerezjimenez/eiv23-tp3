@@ -1,0 +1,19 @@
+---
+:source:
+  :file: test/test_luz_escalera.c
+  :dirname: test
+  :basename: test_luz_escalera.c
+:successes: []
+:failures:
+- :test: 'test_inicializacion '
+  :line: 4
+  :message: Funciona!!!
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 1
+  :passed: 0
+  :failed: 1
+  :ignored: 0
+:stdout: []
+:time: 0.0614063999382779
