@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
                               .pio\build\bluepill_f103c8\test\test_bluepill\test.o (BP_inicio)
 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                              .pio\build\bluepill_f103c8\test\test_luz_escalera.o (UnityFail)
+                              .pio\build\bluepill_f103c8\test\test_bluepill\test.o (UnityAssertBits)
 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
                               c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (exit)
 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
@@ -82,20 +82,13 @@ Discarded input sections
  .bss           0x00000000        0x0 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
  .text.BP_Pin_read
                 0x00000000       0x20 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .text.BP_Pin_mode
-                0x00000000       0x74 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
  .text.BP_Pin_set
                 0x00000000       0x20 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .rodata.pines  0x00000000       0x10 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
  .text          0x00000000        0x0 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .data          0x00000000        0x0 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .bss           0x00000000        0x0 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityFloatsWithin
                 0x00000000       0xe8 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .text.UnityTestResultsFailBegin
-                0x00000000       0x24 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .text.UnityAddMsgIfSpecified
-                0x00000000       0x50 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityIsOneArrayNull
                 0x00000000       0x38 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityPrintExpectedAndActualStrings
@@ -104,12 +97,8 @@ Discarded input sections
                 0x00000000       0x58 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityPrintNumberByStyle
                 0x00000000       0x8c .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .text.UnityPrintMask
-                0x00000000       0x2a .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityPrintFloat
                 0x00000000      0x298 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .text.UnityAssertBits
-                0x00000000       0x74 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityAssertEqualNumber
                 0x00000000       0x70 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityAssertGreaterOrLessOrEqualNumber
@@ -159,10 +148,6 @@ Discarded input sections
                 0x00000000       0x1a .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrDet
                 0x00000000        0xc .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .rodata.UnityStrDetail1Name
-                0x00000000        0xa .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .rodata.UnityStrDetail2Name
-                0x00000000        0xb .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrElement
                 0x00000000        0xa .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrErr64
@@ -173,8 +158,6 @@ Discarded input sections
                 0x00000000       0x1e .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrErrShorthand
                 0x00000000       0x21 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .rodata.UnityStrExpected
-                0x00000000        0xb .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrGt
                 0x00000000       0x15 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrIgnore
@@ -205,10 +188,6 @@ Discarded input sections
                 0x00000000        0xd .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrPointless
                 0x00000000       0x37 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .rodata.UnityStrSpacer
-                0x00000000        0x3 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .rodata.UnityStrWas
-                0x00000000        0x6 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text          0x00000000        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
  .data          0x00000000        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
  .bss           0x00000000        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
@@ -338,7 +317,7 @@ LOAD c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gc
                 0x08000000                g_pfnVectors
                 0x0800010c                . = ALIGN (0x4)
 
-.text           0x0800010c      0x52c
+.text           0x0800010c      0x70c
                 0x0800010c                . = ALIGN (0x4)
  *(.text)
  .text          0x0800010c       0x40 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
@@ -410,166 +389,191 @@ LOAD c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gc
  .text.SystemCoreClockUpdate
                 0x08000200       0x58 .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
                 0x08000200                SystemCoreClockUpdate
- .text.Configurar_Entrada
-                0x08000258       0x10 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
- .text.setUp    0x08000268        0x2 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
-                0x08000268                setUp
+ .text.PRUEBA_CONFIG_ENTRADA
+                0x08000258       0x60 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+ .text.setUp    0x080002b8        0x2 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+                0x080002b8                setUp
  .text.tearDown
-                0x0800026a        0x2 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
-                0x0800026a                tearDown
+                0x080002ba        0x2 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+                0x080002ba                tearDown
  .text.startup.main
-                0x0800026c       0x34 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
-                0x0800026c                main
+                0x080002bc       0x34 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+                0x080002bc                main
  .text.unityOutputStart
-                0x080002a0       0x60 .pio\build\bluepill_f103c8\test\unity_config.o
-                0x080002a0                unityOutputStart
+                0x080002f0       0x60 .pio\build\bluepill_f103c8\test\unity_config.o
+                0x080002f0                unityOutputStart
  .text.unityOutputChar
-                0x08000300       0x14 .pio\build\bluepill_f103c8\test\unity_config.o
-                0x08000300                unityOutputChar
+                0x08000350       0x14 .pio\build\bluepill_f103c8\test\unity_config.o
+                0x08000350                unityOutputChar
  .text.unityOutputFlush
-                0x08000314       0x10 .pio\build\bluepill_f103c8\test\unity_config.o
-                0x08000314                unityOutputFlush
+                0x08000364       0x10 .pio\build\bluepill_f103c8\test\unity_config.o
+                0x08000364                unityOutputFlush
  .text.unityOutputComplete
-                0x08000324       0x20 .pio\build\bluepill_f103c8\test\unity_config.o
-                0x08000324                unityOutputComplete
+                0x08000374       0x20 .pio\build\bluepill_f103c8\test\unity_config.o
+                0x08000374                unityOutputComplete
  .text.BP_inicio
-                0x08000344       0x3c .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
-                0x08000344                BP_inicio
+                0x08000394       0x3c .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+                0x08000394                BP_inicio
+ .text.BP_Pin_mode
+                0x080003d0       0x7c .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+                0x080003d0                BP_Pin_mode
  .text.BP_delay
-                0x08000380       0x18 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
-                0x08000380                BP_delay
+                0x0800044c       0x18 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+                0x0800044c                BP_delay
  .text.SysTick_Handler
-                0x08000398       0x10 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
-                0x08000398                SysTick_Handler
+                0x08000464       0x10 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+                0x08000464                SysTick_Handler
  .text.UnityPrintNumberUnsigned
-                0x080003a8       0x34 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x080003a8                UnityPrintNumberUnsigned
+                0x08000474       0x34 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x08000474                UnityPrintNumberUnsigned
  .text.UnityPrintNumber
-                0x080003dc       0x18 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x080003dc                UnityPrintNumber
+                0x080004a8       0x18 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080004a8                UnityPrintNumber
  .text.UnityPrintNumberHex
-                0x080003f4       0x2e .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x080003f4                UnityPrintNumberHex
+                0x080004c0       0x2e .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080004c0                UnityPrintNumberHex
  .text.UnityPrint.part.0
-                0x08000422       0x4c .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080004ee       0x4c .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .text.UnityPrint
-                0x0800046e        0x8 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x0800046e                UnityPrint
- *fill*         0x08000476        0x2 
+                0x0800053a        0x8 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x0800053a                UnityPrint
+ *fill*         0x08000542        0x2 
  .text.UnityTestResultsBegin
-                0x08000478       0x30 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x08000544       0x30 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .text.UnityTestResultsFailBegin
+                0x08000574       0x24 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .text.UnityAddMsgIfSpecified
+                0x08000598       0x50 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .text.UnityPrintMask
+                0x080005e8       0x2a .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080005e8                UnityPrintMask
+ *fill*         0x08000612        0x2 
  .text.UnityConcludeTest
-                0x080004a8       0x48 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x080004a8                UnityConcludeTest
+                0x08000614       0x48 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x08000614                UnityConcludeTest
+ .text.UnityAssertBits
+                0x0800065c       0x74 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x0800065c                UnityAssertBits
  .text.UnityDefaultTestRun
-                0x080004f0       0x48 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x080004f0                UnityDefaultTestRun
+                0x080006d0       0x48 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080006d0                UnityDefaultTestRun
  .text.UnityBegin
-                0x08000538       0x24 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x08000538                UnityBegin
+                0x08000718       0x24 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x08000718                UnityBegin
  .text.UnityEnd
-                0x0800055c       0x7c .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x0800055c                UnityEnd
+                0x0800073c       0x7c .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x0800073c                UnityEnd
  .text.__libc_init_array
-                0x080005d8       0x48 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
-                0x080005d8                __libc_init_array
+                0x080007b8       0x48 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+                0x080007b8                __libc_init_array
  *(.glue_7)
- .glue_7        0x08000620        0x0 linker stubs
+ .glue_7        0x08000800        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000620        0x0 linker stubs
+ .glue_7t       0x08000800        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08000620        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .eh_frame      0x08000800        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
  *(.init)
- .init          0x08000620        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x08000620                _init
- .init          0x08000624        0x8 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ .init          0x08000800        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x08000800                _init
+ .init          0x08000804        0x8 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x0800062c        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x0800062c                _fini
- .fini          0x08000630        0x8 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
-                0x08000638                . = ALIGN (0x4)
-                0x08000638                _etext = .
+ .fini          0x0800080c        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x0800080c                _fini
+ .fini          0x08000810        0x8 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x08000818                . = ALIGN (0x4)
+                0x08000818                _etext = .
 
-.vfp11_veneer   0x08000638        0x0
- .vfp11_veneer  0x08000638        0x0 linker stubs
+.vfp11_veneer   0x08000818        0x0
+ .vfp11_veneer  0x08000818        0x0 linker stubs
 
-.v4_bx          0x08000638        0x0
- .v4_bx         0x08000638        0x0 linker stubs
+.v4_bx          0x08000818        0x0
+ .v4_bx         0x08000818        0x0 linker stubs
 
-.iplt           0x08000638        0x0
- .iplt          0x08000638        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.iplt           0x08000818        0x0
+ .iplt          0x08000818        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
-.rodata         0x08000638       0x80
-                0x08000638                . = ALIGN (0x4)
+.rodata         0x08000818       0xbc
+                0x08000818                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x08000638       0x10 .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
-                0x08000638                AHBPrescTable
+                0x08000818       0x10 .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
+                0x08000818                AHBPrescTable
  .rodata.main.str1.1
-                0x08000648       0x2d .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+                0x08000828       0x30 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+ .rodata.pines  0x08000858       0x10 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
  .rodata.UnityStrBreaker
-                0x08000675       0x18 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x08000868       0x18 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .rodata.UnityStrDetail1Name
+                0x08000880        0xa .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .rodata.UnityStrDetail2Name
+                0x0800088a        0xb .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .rodata.UnityStrExpected
+                0x08000895        0xb .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrFail
-                0x0800068d        0x5 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x0800068d                UnityStrFail
+                0x080008a0        0x5 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080008a0                UnityStrFail
  .rodata.UnityStrOk
-                0x08000692        0x3 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x08000692                UnityStrOk
+                0x080008a5        0x3 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080008a5                UnityStrOk
  .rodata.UnityStrPass
-                0x08000695        0x5 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x08000695                UnityStrPass
+                0x080008a8        0x5 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080008a8                UnityStrPass
  .rodata.UnityStrResultsFailures
-                0x0800069a        0xb .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080008ad        0xb .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrResultsIgnored
-                0x080006a5        0xa .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080008b8        0xa .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
  .rodata.UnityStrResultsTests
-                0x080006af        0x8 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
-                0x080006b8                . = ALIGN (0x4)
- *fill*         0x080006b7        0x1 
+                0x080008c2        0x8 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .rodata.UnityStrSpacer
+                0x080008ca        0x3 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .rodata.UnityStrWas
+                0x080008cd        0x6 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+                0x080008d4                . = ALIGN (0x4)
+ *fill*         0x080008d3        0x1 
 
-.rel.dyn        0x080006b8        0x0
- .rel.iplt      0x080006b8        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x080008d4        0x0
+ .rel.iplt      0x080008d4        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
-.ARM.extab      0x080006b8        0x0
-                0x080006b8                . = ALIGN (0x4)
+.ARM.extab      0x080008d4        0x0
+                0x080008d4                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080006b8                . = ALIGN (0x4)
+                0x080008d4                . = ALIGN (0x4)
 
-.ARM            0x080006b8        0x0
-                0x080006b8                . = ALIGN (0x4)
-                0x080006b8                __exidx_start = .
+.ARM            0x080008d4        0x0
+                0x080008d4                . = ALIGN (0x4)
+                0x080008d4                __exidx_start = .
  *(.ARM.exidx*)
-                0x080006b8                __exidx_end = .
-                0x080006b8                . = ALIGN (0x4)
+                0x080008d4                __exidx_end = .
+                0x080008d4                . = ALIGN (0x4)
 
-.preinit_array  0x080006b8        0x0
-                0x080006b8                . = ALIGN (0x4)
-                0x080006b8                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x080008d4        0x0
+                0x080008d4                . = ALIGN (0x4)
+                0x080008d4                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x080006b8                PROVIDE (__preinit_array_end, .)
-                0x080006b8                . = ALIGN (0x4)
+                0x080008d4                PROVIDE (__preinit_array_end, .)
+                0x080008d4                . = ALIGN (0x4)
 
-.init_array     0x080006b8        0x4
-                0x080006b8                . = ALIGN (0x4)
-                0x080006b8                PROVIDE (__init_array_start, .)
+.init_array     0x080008d4        0x4
+                0x080008d4                . = ALIGN (0x4)
+                0x080008d4                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x080006b8        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
-                0x080006bc                PROVIDE (__init_array_end, .)
-                0x080006bc                . = ALIGN (0x4)
+ .init_array    0x080008d4        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+                0x080008d8                PROVIDE (__init_array_end, .)
+                0x080008d8                . = ALIGN (0x4)
 
-.fini_array     0x080006bc        0x4
-                0x080006bc                . = ALIGN (0x4)
+.fini_array     0x080008d8        0x4
+                0x080008d8                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080006bc        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .fini_array    0x080008d8        0x4 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end, .)
-                0x080006c0                . = ALIGN (0x4)
-                0x080006c0                _sidata = LOADADDR (.data)
+                0x080008dc                . = ALIGN (0x4)
+                0x080008dc                _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x4 load address 0x080006c0
+.data           0x20000000        0x4 load address 0x080008dc
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -582,11 +586,11 @@ LOAD c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gc
                 0x20000004                . = ALIGN (0x4)
                 0x20000004                _edata = .
 
-.igot.plt       0x20000004        0x0 load address 0x080006c4
+.igot.plt       0x20000004        0x0 load address 0x080008e0
  .igot.plt      0x20000004        0x0 c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 0x20000004                . = ALIGN (0x4)
 
-.bss            0x20000004       0xa4 load address 0x080006c4
+.bss            0x20000004       0xa4 load address 0x080008e0
                 0x20000004                _sbss = .
                 0x20000004                __bss_start__ = _sbss
  *(.bss)
@@ -601,7 +605,7 @@ LOAD c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gc
                 0x200000a8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200000a8      0x600 load address 0x080006c4
+                0x200000a8      0x600 load address 0x080008e0
                 0x200000a8                . = ALIGN (0x8)
                 [!provide]                PROVIDE (end, .)
                 [!provide]                PROVIDE (_end, .)
@@ -643,25 +647,25 @@ LOAD c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gc
                 0x000001b2       0x1d c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
 OUTPUT(.pio\build\bluepill_f103c8\firmware.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x6031
+.debug_info     0x00000000     0x61a5
  .debug_info    0x00000000      0x3e4 .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
- .debug_info    0x000003e4      0xc7d .pio\build\bluepill_f103c8\test\test_bluepill\test.o
- .debug_info    0x00001061      0x474 .pio\build\bluepill_f103c8\test\unity_config.o
- .debug_info    0x000014d5      0x95b .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .debug_info    0x00001e30     0x4201 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .debug_info    0x000003e4      0xdf0 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+ .debug_info    0x000011d4      0x474 .pio\build\bluepill_f103c8\test\unity_config.o
+ .debug_info    0x00001648      0x95c .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+ .debug_info    0x00001fa4     0x4201 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
 
-.debug_abbrev   0x00000000      0xd43
+.debug_abbrev   0x00000000      0xd6a
  .debug_abbrev  0x00000000      0x131 .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
- .debug_abbrev  0x00000131      0x29f .pio\build\bluepill_f103c8\test\test_bluepill\test.o
- .debug_abbrev  0x000003d0      0x1c7 .pio\build\bluepill_f103c8\test\unity_config.o
- .debug_abbrev  0x00000597      0x28e .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .debug_abbrev  0x00000825      0x51e .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .debug_abbrev  0x00000131      0x2c6 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+ .debug_abbrev  0x000003f7      0x1c7 .pio\build\bluepill_f103c8\test\unity_config.o
+ .debug_abbrev  0x000005be      0x28e .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+ .debug_abbrev  0x0000084c      0x51e .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
 
-.debug_loc      0x00000000     0x3133
+.debug_loc      0x00000000     0x314c
  .debug_loc     0x00000000       0xcd .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
  .debug_loc     0x000000cd       0x73 .pio\build\bluepill_f103c8\test\unity_config.o
- .debug_loc     0x00000140      0x1fa .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .debug_loc     0x0000033a     0x2df9 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .debug_loc     0x00000140      0x213 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+ .debug_loc     0x00000353     0x2df9 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
 
 .debug_aranges  0x00000000      0x220
  .debug_aranges
@@ -675,30 +679,30 @@ OUTPUT(.pio\build\bluepill_f103c8\firmware.elf elf32-littlearm)
  .debug_aranges
                 0x000000d8      0x148 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
 
-.debug_ranges   0x00000000      0x3d0
+.debug_ranges   0x00000000      0x3e8
  .debug_ranges  0x00000000       0x18 .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
- .debug_ranges  0x00000018       0x20 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
- .debug_ranges  0x00000038       0x58 .pio\build\bluepill_f103c8\test\unity_config.o
- .debug_ranges  0x00000090       0x50 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .debug_ranges  0x000000e0      0x2f0 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .debug_ranges  0x00000018       0x38 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+ .debug_ranges  0x00000050       0x58 .pio\build\bluepill_f103c8\test\unity_config.o
+ .debug_ranges  0x000000a8       0x50 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+ .debug_ranges  0x000000f8      0x2f0 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
 
-.debug_line     0x00000000     0x14cd
+.debug_line     0x00000000     0x14dc
  .debug_line    0x00000000      0x26c .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
- .debug_line    0x0000026c      0x35b .pio\build\bluepill_f103c8\test\test_bluepill\test.o
- .debug_line    0x000005c7      0x250 .pio\build\bluepill_f103c8\test\unity_config.o
- .debug_line    0x00000817      0x27e .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .debug_line    0x00000a95      0xa38 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .debug_line    0x0000026c      0x366 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+ .debug_line    0x000005d2      0x250 .pio\build\bluepill_f103c8\test\unity_config.o
+ .debug_line    0x00000822      0x282 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+ .debug_line    0x00000aa4      0xa38 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
 
 .debug_str      0x00000000     0x19dd
  .debug_str     0x00000000      0x29d .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
                                 0x2ea (size before relaxing)
- .debug_str     0x0000029d      0x5ff .pio\build\bluepill_f103c8\test\test_bluepill\test.o
-                                0x835 (size before relaxing)
- .debug_str     0x0000089c      0x222 .pio\build\bluepill_f103c8\test\unity_config.o
+ .debug_str     0x0000029d      0x67e .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+                                0x8b4 (size before relaxing)
+ .debug_str     0x0000091b      0x20b .pio\build\bluepill_f103c8\test\unity_config.o
                                 0x42a (size before relaxing)
- .debug_str     0x00000abe      0x4b7 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+ .debug_str     0x00000b26      0x475 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
                                 0x752 (size before relaxing)
- .debug_str     0x00000f75      0xa68 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .debug_str     0x00000f9b      0xa42 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
                                0x120e (size before relaxing)
 
 .comment        0x00000000       0x7e
@@ -709,10 +713,10 @@ OUTPUT(.pio\build\bluepill_f103c8\firmware.elf elf32-littlearm)
  .comment       0x0000007e       0x7f .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
  .comment       0x0000007e       0x7f .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
 
-.debug_frame    0x00000000      0x678
+.debug_frame    0x00000000      0x684
  .debug_frame   0x00000000       0x30 .pio\build\bluepill_f103c8\FrameworkCMSIS\system_stm32f1xx.o
- .debug_frame   0x00000030       0x5c .pio\build\bluepill_f103c8\test\test_bluepill\test.o
- .debug_frame   0x0000008c       0x60 .pio\build\bluepill_f103c8\test\unity_config.o
- .debug_frame   0x000000ec       0x88 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
- .debug_frame   0x00000174      0x4d8 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
- .debug_frame   0x0000064c       0x2c c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000030       0x68 .pio\build\bluepill_f103c8\test\test_bluepill\test.o
+ .debug_frame   0x00000098       0x60 .pio\build\bluepill_f103c8\test\unity_config.o
+ .debug_frame   0x000000f8       0x88 .pio\build\bluepill_f103c8\libbfc\libBluePillHal.a(BluePillHal.o)
+ .debug_frame   0x00000180      0x4d8 .pio\build\bluepill_f103c8\lib8b7\libUnity.a(unity.o)
+ .debug_frame   0x00000658       0x2c c:/users/labtel/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
