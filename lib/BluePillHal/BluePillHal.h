@@ -4,19 +4,27 @@
 #include <stdint.h>
 
 typedef enum BP_PuertoPin{
-    B9,
+    B12,
     C13,
     PINLIMITE
 }BP_PuertoPin;
 
 typedef enum BP_ModoPin{
     IN_PULL_UP,
-    OUT_2MHz
+    OUT_2MHz,
+    IN
 }BP_ModoPin;
 
 
 void BP_inicio();
 bool BP_Pin_read(BP_PuertoPin pin);
+
+/**
+ * @brief Activa el puerto y pone el pin en el modo indicado
+ * 
+ * @param pin 
+ * @param modo 
+ */
 void BP_Pin_mode(BP_PuertoPin pin ,BP_ModoPin modo);
 void BP_Pin_set(BP_PuertoPin pin, bool valor);
 /**

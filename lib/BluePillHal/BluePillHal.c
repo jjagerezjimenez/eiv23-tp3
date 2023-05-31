@@ -15,8 +15,9 @@ int npin;
 }Pin;
 
 static Pin const pines[PINLIMITE] = {
-    [B9]  = {.puerto = GPIOB, .npin=9},
-    [C13] = {.puerto = GPIOC, .npin=13}
+    [B12]  = {.puerto = GPIOB, .npin=12},
+    [C13] = {.puerto = GPIOC, .npin=13},
+
 };
 
 
@@ -36,6 +37,9 @@ void BP_Pin_mode(BP_PuertoPin pin, BP_ModoPin modo){
         break;
         case OUT_2MHz:
             bitsModo = 0b0010;
+        break;
+        case IN:
+            bitsModo = 0b0100;
         break;
         default:
             bitsModo = 0;
@@ -69,3 +73,4 @@ void BP_delay(uint32_t tiempo){
 
 void SysTick_Handler(void){
     ++ticks;}
+
