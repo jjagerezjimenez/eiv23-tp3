@@ -1,9 +1,10 @@
 #include <BluePillHal.h>
 #include <stm32f1xx.h>
+#include <control_luz.h>
 
 
 void SysTick_Handler(void);
-void SystemCoreClockUpdate(void);
+
 void BP_inicio(){
     SystemCoreClockUpdate();
     uint32_t const CUENTAS_POR_MILISEG = SystemCoreClock / 1000;
@@ -71,6 +72,21 @@ void BP_delay(uint32_t tiempo){
     }
 }
 
+static ControladorLuz * controlador;
+void setControlador (ControladorLuz * controladorLuz){
+    controlador = controladorLuz;
+}
+
 void SysTick_Handler(void){
-    ++ticks;}
+    ++ticks;
+    checkTIMEOUT(controlador);}
+
+void checkTIMEOUT(ControladorLuz * controlador){
+    if (getTicks() == controlador->TO_Boton) Maquina_despacha(controlador,EV_TIMEOUT_BOTON);
+    if (getTicks() == controlador->TO_Luz)   Maquina_despacha(controlador,EV_TIMEOUT_LUZ);   
+    }   
+ 
+
+int getTicks(void){ return ticks;}
+
 

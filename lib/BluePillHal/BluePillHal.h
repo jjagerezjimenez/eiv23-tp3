@@ -33,4 +33,8 @@ void BP_Pin_set(BP_PuertoPin pin, bool valor);
  * @param tiempo Tiempo en milisegundos
  */
 void BP_delay(uint32_t tiempo);
+void setControlador(ControladorLuz * controladorLuz);
+
+
+
 #endif

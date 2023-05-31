@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "stm32f1xx.h": "c",
-        "unity.h": "c"
+        "unity.h": "c",
+        "bluepillhal.h": "c",
+        "maquina_impl.h": "c",
+        "maquina.h": "c",
+        "stdbool.h": "c",
+        "stddef.h": "c"
     }
 }
