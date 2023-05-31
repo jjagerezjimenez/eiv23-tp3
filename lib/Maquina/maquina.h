@@ -20,19 +20,10 @@ enum EventoSistema{
      */
     EV_RESET,
     /**
-     * @brief Boton presionado
-     */
-    EV_BOTON,
-    /**
-     * @brief Timeout del LED (Apagar led)
+     * @brief Primer evento disponible para la aplicación
      * 
      */
-    EV_TIMEOUT_LUZ,
-    /**
-     * @brief Se acabo el tiempo para presionar el siguiente botòn
-     * 
-     */
-    EV_TIMEOUT_BOTON
+    EV_USUARIO
 };
 
 

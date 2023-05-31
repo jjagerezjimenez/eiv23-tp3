@@ -2,6 +2,22 @@
 #define CONTROL_LUZ_H
 #include "maquina.h"
 
+enum EventoControlador{
+    /**
+     * @brief Boton presionado
+     */
+    EV_BOTON = EV_USUARIO,
+    /**
+     * @brief Timeout del LED (Apagar led)
+     * 
+     */
+    EV_TIMEOUT_LUZ,
+    /**
+     * @brief Se acabo el tiempo para presionar el siguiente botòn
+     * 
+     */
+    EV_TIMEOUT_BOTON
+};
 
 typedef unsigned TiempoMilisegundos;
 
