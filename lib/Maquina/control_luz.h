@@ -2,11 +2,6 @@
 #define CONTROL_LUZ_H
 #include "maquina.h"
 
-enum EventoControladorLuz{
-    EV_BOTON_PULSADO = EV_BOTON,
-    EV_TIMEOUT_LUZ,
-    EV_TIMEOUT_BOTON
-};
 
 typedef unsigned TiempoMilisegundos;
 
@@ -36,7 +31,7 @@ void luzOn(void);
 void luzOff(void);
 
 /* IMPLEMENTAR */
-bool setTimeoutLuz(Maquina *maquina);
-bool setTimeoutBoton(Maquina *maquina);
+void setTimeoutLuz(Maquina * maquina);
+void setTimeoutBoton(Maquina * maquina);
 
 #endif

@@ -2,6 +2,7 @@
 #define BLUEPILLHAL_H
 #include <stdbool.h>
 #include <stdint.h>
+#include <control_luz.h>
 
 typedef enum BP_PuertoPin{
     B12,
@@ -34,6 +35,7 @@ void BP_Pin_set(BP_PuertoPin pin, bool valor);
  */
 void BP_delay(uint32_t tiempo);
 void setControlador(ControladorLuz * controladorLuz);
+unsigned getTicks(void);
 
 
 

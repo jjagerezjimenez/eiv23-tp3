@@ -4,6 +4,8 @@
 
 
 void SysTick_Handler(void);
+void checkTIMEOUT(Maquina * controlador);
+
 
 void BP_inicio(){
     SystemCoreClockUpdate();
@@ -79,14 +81,14 @@ void setControlador (ControladorLuz * controladorLuz){
 
 void SysTick_Handler(void){
     ++ticks;
-    checkTIMEOUT(controlador);}
+    checkTIMEOUT((Maquina*)controlador);}
 
-void checkTIMEOUT(ControladorLuz * controlador){
-    if (getTicks() == controlador->TO_Boton) Maquina_despacha(controlador,EV_TIMEOUT_BOTON);
-    if (getTicks() == controlador->TO_Luz)   Maquina_despacha(controlador,EV_TIMEOUT_LUZ);   
+void checkTIMEOUT(Maquina * controlador){
+    if (getTicks() == ( (ControladorLuz*)controlador )->TO_Boton) Maquina_despacha(controlador,EV_TIMEOUT_BOTON);
+    if (getTicks() == ( (ControladorLuz*)controlador )->TO_Luz)   Maquina_despacha(controlador,EV_TIMEOUT_LUZ);   
     }   
  
 
-int getTicks(void){ return ticks;}
+unsigned getTicks(void){ return ticks;}
 
 

@@ -1,6 +1,7 @@
 #include "control_luz.h"
 #include "maquina_impl.h"
 
+int contadorPulsaciones = 0 ;
 
 // Estados
 
@@ -13,7 +14,7 @@ Maquina * ControladorLuz_init(ControladorLuz *self,TiempoMilisegundos tiempoLuz,
     self->tiempoBoton  = tiempoBotonTotal/2;
 }
 
-static Resultado Estado_apagado(Maquina *contexto, Evento evento){
+static Resultado Estado_apagado(Maquina * contexto, Evento evento){
     Resultado resultado = {0};
     ControladorLuz *self = (ControladorLuz*) contexto; //Por que pone este Cast?
     switch(evento){
@@ -21,7 +22,10 @@ static Resultado Estado_apagado(Maquina *contexto, Evento evento){
 
         resultado.codigo = RES_PROCESADO;
     break; case EV_BOTON:
-        setTimeout(self->tiempoOn,contexto);
+        contadorPulsaciones++;
+        
+        setTimeoutBoton((ControladorLuz *) contexto); //No lo puede interpretar como un puntero a Controlador Luz?
+        setTimeoutLuz  ((ControladorLuz *) contexto);
         resultado.codigo = RES_TRANSICION;
         resultado.param = Estado_encendido;
     break; default:
@@ -34,12 +38,26 @@ static Resultado Estado_encendido(Maquina *contexto, Evento evento){
     (void)contexto;
     Resultado resultado = {0};
     switch(evento){
-    break; case EV_TIMEOUT:
-        luzOff();
+        case EV_BOTON:
+            contadorPulsaciones++;
+            if (contadorPulsaciones == 3) {
+                resultado.codigo = RES_TRANSICION;
+                resultado.param = Estado_Mudanza;
+            }
+            break;
+        case EV_TIMEOUT_BOTON:
+            contadorPulsaciones = 0;
+            break;
+    break; case EV_TIMEOUT_LUZ:
+        if (!ignorarTIMEOUTluz) luzOff();
         resultado.codigo = RES_TRANSICION;
         resultado.param = Estado_apagado;
     break; default:
         resultado.codigo = RES_IGNORADO;
     }
     return resultado;
+}
+
+static Resultado Estado_Mudanza(Maquina *context, evento evento){
+
 }

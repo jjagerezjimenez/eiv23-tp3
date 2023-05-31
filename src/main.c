@@ -2,20 +2,21 @@
 
 #ifdef USA_BLUEPILL_HALL
 #define BOTON B12
+#define PIN_LED C13
 #define TIEMPO_LUZ_ENCENDIDA 60000
 #define TIEMPO_PARA_PRESIONAR 1000
 #include <BluePillHal.h>
 #include "control_luz.h"
 
 
-void luzOn(void){BP_Pin_set(B12,1);}
-void luzOff(void){BP_Pin_set(B12,0);}
+void luzOn(void){BP_Pin_set(PIN_LED,1);}
+void luzOff(void){BP_Pin_set(PIN_LED,0);}
 
-bool setTimeoutLuz(Maquina controlador){
-    controlador->TO_Luz = getTicks() + controlador.tiempoLuz;
+void setTimeoutLuz(Maquina * controlador){
+     ( (ControladorLuz*)controlador )->TO_Luz = getTicks() +  ( (ControladorLuz*)controlador )->tiempoLuz;
     }
-bool setTimeoutBoton(Maquina controlador){
-    controlador->TO_Boton = getTicks() + controlador.tiempoBoton;
+void setTimeoutBoton(Maquina *  controlador){
+    ( (ControladorLuz*)controlador )->TO_Boton = getTicks() +  ( (ControladorLuz*)controlador )->tiempoBoton;
     }
 
 bool botonPresionado(){
@@ -26,7 +27,6 @@ static  bool valorAnterior;
 
         if (valorActual != valorAnterior && (getTicks()-ultimoCambio) >= 15){
             Presionado = true;
-            if 
             ultimoCambio = getTicks();
             valorAnterior=valorActual;
         }
@@ -37,9 +37,10 @@ static  bool valorAnterior;
 int main(void) {
     BP_inicio();
     BP_Pin_mode(BOTON,IN);
+    BP_Pin_mode(PIN_LED, OUT_2MHz);
     static ControladorLuz implControlador;
     Maquina * controlador = ControladorLuz_init(&implControlador,TIEMPO_LUZ_ENCENDIDA,TIEMPO_PARA_PRESIONAR);
-    setControlador(controlador);
+    setControlador( (ControladorLuz*) controlador );
     while(1){
         Maquina_procesa(controlador);
         if (botonPresionado()){
