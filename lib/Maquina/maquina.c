@@ -1,5 +1,6 @@
 #include "maquina_impl.h"
 #include <stddef.h>
+#include <stm32f100xb.h>
 
 void Maquina_init(Maquina *self, Estado estadoInicial)
 {
@@ -23,12 +24,14 @@ static void Maquina__insertaEventoEnCola(Maquina *self, Evento evento)
 
 bool Maquina_despacha(Maquina *self, Evento evento)
 {
+    __disable_irq();
     bool hecho = false;
     if ((EV_NULO != evento) && Maquina__pEspacioDisponibleEnCola(self))
     {
         Maquina__insertaEventoEnCola(self, evento);
         hecho = true;
     }
+    __enable_irq();
     return hecho;
 }
 

@@ -1,9 +1,8 @@
 #include <BluePillHal.h>
 #include <stm32f1xx.h>
-#include <control_luz.h>
+
 
 void SysTick_Handler(void);
-static void checkTIMEOUT(ControladorLuz *controlador);
 
 void BP_inicio()
 {
@@ -19,8 +18,21 @@ typedef struct Pin
 } Pin;
 
 static Pin const pines[PINLIMITE] = {
+    [A0]  = {.puerto = GPIOA, .npin = 0},
+    [A1]  = {.puerto = GPIOA, .npin = 1},
+    [A2]  = {.puerto = GPIOA, .npin = 2},
+    [A3]  = {.puerto = GPIOA, .npin = 3},
+    [A4]  = {.puerto = GPIOA, .npin = 4},
+    [A5]  = {.puerto = GPIOA, .npin = 5},
+    [A6]  = {.puerto = GPIOA, .npin = 6},
     [B12] = {.puerto = GPIOB, .npin = 12},
     [C13] = {.puerto = GPIOC, .npin = 13},
+    [B5]  = {.puerto = GPIOB, .npin = 5},
+    [B6]  = {.puerto = GPIOB, .npin = 6},
+    [B7]  = {.puerto = GPIOB, .npin = 7},
+    [B8]  = {.puerto = GPIOB, .npin = 8},
+    [B9]  = {.puerto = GPIOB, .npin = 9},
+    [B10] = {.puerto = GPIOB, .npin = 10}
 
 };
 
@@ -54,7 +66,7 @@ void BP_Pin_mode(BP_PuertoPin pin, BP_ModoPin modo)
 
     int const OFFSET_CONFIG = ((pines[pin].npin % 8) * 4);
     int const MASCARA_CONFIG = 0b1111;
-    uint32_t volatile *const CR = (pines[pin].npin < 7) ? &pines[pin].puerto->CRL : &pines[pin].puerto->CRH;
+    uint32_t volatile *const CR = (pines[pin].npin < 8) ? &pines[pin].puerto->CRL : &pines[pin].puerto->CRH;
 
     *CR = (*CR & ~(MASCARA_CONFIG << OFFSET_CONFIG)) | (bitsModo << OFFSET_CONFIG);
 }
@@ -78,25 +90,12 @@ void BP_delay(uint32_t tiempo)
     }
 }
 
-static ControladorLuz *controlador;
-void setControlador(ControladorLuz *controladorLuz)
-{
-    controlador = controladorLuz;
-}
 
 void SysTick_Handler(void)
 {
     ++ticks;
-    checkTIMEOUT(controlador);
 }
 
-static void checkTIMEOUT(ControladorLuz *controlador)
-{
-    Maquina *maquina = (Maquina *)controlador;
-    if (getTicks() == controlador->TO_Boton)
-        Maquina_despacha(maquina, EV_TIMEOUT_BOTON);
-    if (getTicks() == controlador->TO_Luz)
-        Maquina_despacha(maquina, EV_TIMEOUT_LUZ);
-}
+
 
 unsigned getTicks(void) { return ticks; }

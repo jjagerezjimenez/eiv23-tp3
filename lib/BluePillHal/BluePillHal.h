@@ -6,6 +6,19 @@
 
 typedef enum BP_PuertoPin
 {
+    A0,
+    A1,
+    A2,
+    A3,
+    A4,
+    A5,
+    A6,
+    B5,
+    B6,
+    B7,
+    B8,
+    B9,
+    B10,
     B12,
     C13,
     PINLIMITE
@@ -35,6 +48,7 @@ void BP_Pin_set(BP_PuertoPin pin, bool valor);
  * @param tiempo Tiempo en milisegundos
  */
 void BP_delay(uint32_t tiempo);
+
 void setControlador(ControladorLuz *controladorLuz);
 unsigned getTicks(void);
 
