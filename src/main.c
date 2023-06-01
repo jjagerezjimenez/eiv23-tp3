@@ -25,7 +25,7 @@ static  bool valorAnterior;
         bool valorActual = BP_Pin_read(BOTON);
         bool Presionado = false;
 
-        if (valorActual != valorAnterior && (getTicks()-ultimoCambio) >= 15){
+        if (!valorActual && valorAnterior && (getTicks()-ultimoCambio) >= 15){
             Presionado = true;
             ultimoCambio = getTicks();
             valorAnterior=valorActual;
@@ -36,7 +36,7 @@ static  bool valorAnterior;
 
 int main(void) {
     BP_inicio();
-    BP_Pin_mode(BOTON,IN);
+    BP_Pin_mode(BOTON,IN_PULL_UP);
     BP_Pin_mode(PIN_LED, OUT_2MHz);
     static ControladorLuz implControlador;
     Maquina * controlador = ControladorLuz_init(&implControlador,TIEMPO_LUZ_ENCENDIDA,TIEMPO_PARA_PRESIONAR);
