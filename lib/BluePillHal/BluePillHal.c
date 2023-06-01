@@ -4,7 +4,7 @@
 
 
 void SysTick_Handler(void);
-void checkTIMEOUT(Maquina * controlador);
+static void checkTIMEOUT(ControladorLuz * controlador);
 
 
 void BP_inicio(){
@@ -81,11 +81,12 @@ void setControlador (ControladorLuz * controladorLuz){
 
 void SysTick_Handler(void){
     ++ticks;
-    checkTIMEOUT((Maquina*)controlador);}
+    checkTIMEOUT(controlador);}
 
-void checkTIMEOUT(Maquina * controlador){
-    if (getTicks() == ( (ControladorLuz*)controlador )->TO_Boton) Maquina_despacha(controlador,EV_TIMEOUT_BOTON);
-    if (getTicks() == ( (ControladorLuz*)controlador )->TO_Luz)   Maquina_despacha(controlador,EV_TIMEOUT_LUZ);   
+static void checkTIMEOUT(ControladorLuz * controlador){
+    Maquina * maquina = (Maquina*) controlador;
+    if (getTicks() == controlador->TO_Boton) Maquina_despacha(maquina,EV_TIMEOUT_BOTON);
+    if (getTicks() == controlador->TO_Luz)   Maquina_despacha(maquina,EV_TIMEOUT_LUZ);   
     }   
  
 

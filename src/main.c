@@ -12,11 +12,11 @@
 void luzOn(void){BP_Pin_set(PIN_LED,1);}
 void luzOff(void){BP_Pin_set(PIN_LED,0);}
 
-void setTimeoutLuz(Maquina * controlador){
-     ( (ControladorLuz*)controlador )->TO_Luz = getTicks() +  ( (ControladorLuz*)controlador )->tiempoLuz;
+void setTimeoutLuz(ControladorLuz * controlador){
+    controlador->TO_Luz = getTicks() +  controlador->tiempoLuz;
     }
-void setTimeoutBoton(Maquina *  controlador){
-    ( (ControladorLuz*)controlador )->TO_Boton = getTicks() +  ( (ControladorLuz*)controlador )->tiempoBoton;
+void setTimeoutBoton(ControladorLuz *  controlador){
+   controlador->TO_Boton = getTicks() +  controlador->tiempoBoton;
     }
 
 bool botonPresionado(){

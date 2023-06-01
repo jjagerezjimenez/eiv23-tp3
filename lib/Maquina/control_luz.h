@@ -17,6 +17,9 @@ enum EventoControlador{
      * 
      */
     EV_TIMEOUT_BOTON
+    /**
+     * 
+    */
 };
 
 typedef unsigned TiempoMilisegundos;
@@ -27,6 +30,7 @@ typedef struct ControladorLuz{
     TiempoMilisegundos tiempoBoton;
     TiempoMilisegundos TO_Luz;
     TiempoMilisegundos TO_Boton;
+    unsigned contadorPulsaciones;
 }ControladorLuz;
 
 /**
@@ -47,7 +51,7 @@ void luzOn(void);
 void luzOff(void);
 
 /* IMPLEMENTAR */
-void setTimeoutLuz(Maquina * maquina);
-void setTimeoutBoton(Maquina * maquina);
+void setTimeoutLuz(ControladorLuz * controlador);
+void setTimeoutBoton(ControladorLuz * controlador);
 
 #endif
