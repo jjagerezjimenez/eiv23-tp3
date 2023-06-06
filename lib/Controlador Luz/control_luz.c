@@ -12,10 +12,10 @@
 static Resultado Estado_apagado(Maquina *contexto, Evento evento);
 static Resultado Estado_encendido(Maquina *contexto, Evento evento);
 static Resultado Estado_mudanza(Maquina *contexto, Evento evento);
-static ControladorLuz *controlador = 0;
+static ControladorLuz *controlador_luz_handler = 0;
 
 Maquina *ControladorLuz_init(ControladorLuz *self, TiempoMilisegundos tiempoLuz, TiempoMilisegundos tiempoBotonTotal)
-{   controlador = self;
+{   controlador_luz_handler = self;
     Maquina_init(&self->maquina, Estado_apagado);
     self->tiempoLuz = tiempoLuz;
     self->tiempoBoton = tiempoBotonTotal;
@@ -26,7 +26,7 @@ Maquina *ControladorLuz_init(ControladorLuz *self, TiempoMilisegundos tiempoLuz,
 static Resultado Estado_apagado(Maquina *contexto, Evento evento)
 {
     Resultado resultado = {0};
-    ControladorLuz *self = (ControladorLuz *)contexto; // Por que pone este Cast?
+    ControladorLuz *self = (ControladorLuz *)contexto; 
     switch (evento)
     {
     case EV_BOTON:
@@ -34,7 +34,7 @@ static Resultado Estado_apagado(Maquina *contexto, Evento evento)
         BP_Pin_set(A0, 1);
         self->contadorPulsaciones = 1;
         luzOn();
-        setTimeoutBoton(self); // No lo puede interpretar como un puntero a Controlador Luz?
+        setTimeoutBoton(self); 
         setTimeoutLuz(self);
         resultado.codigo = RES_TRANSICION;
         resultado.param = Estado_encendido;
@@ -124,16 +124,6 @@ void luzOff(void)
 {
     BP_Pin_set(PIN_LED, 1);
 }
-/*
-void setTimeoutLuz(ControladorLuz *controlador)
-{
-    controlador->TO_Luz = getTicks() + controlador->tiempoLuz;
-}
-void setTimeoutBoton(ControladorLuz *controlador)
-{
-    controlador->TO_Boton = getTicks() + controlador->tiempoBoton;
-}
-*/
 
 void setTimeoutLuz(ControladorLuz *controlador)
 {
@@ -143,23 +133,6 @@ void setTimeoutBoton(ControladorLuz *controlador)
 {
     controlador->TO_Boton =  controlador->tiempoBoton;
 }
-
-bool botonPresionado()
-{
-    static TiempoMilisegundos ultimoCambio = 0;
-    static bool valorAnterior;
-    bool valorActual = BP_Pin_read(BOTON);
-    bool Presionado = false;
-
-    if (!valorActual && valorAnterior && (getTicks() - ultimoCambio) >= 30)
-    {
-        Presionado = true;
-        ultimoCambio = getTicks();
-    }
-    valorAnterior = valorActual;
-    return Presionado;
-}
-
 static bool procesaAntirreboteBoton(void)
 {
     enum
@@ -196,16 +169,6 @@ static bool procesaAntirreboteBoton(void)
     }
     return estado;
 }
-/*
-static void checkTIMEOUT(ControladorLuz *controlador)
-{
-    Maquina *maquina = (Maquina *)controlador;
-    if (getTicks() == controlador->TO_Boton)
-        Maquina_despacha(maquina, EV_TIMEOUT_BOTON);
-    if (getTicks() == controlador->TO_Luz)
-        Maquina_despacha(maquina, EV_TIMEOUT_LUZ);
-}
-*/
 static void checkTIMEOUT (ControladorLuz *controlador)
 {   if (controlador == 0) return;
 
@@ -230,5 +193,43 @@ static void checkTIMEOUT (ControladorLuz *controlador)
 
 void tick_handler (void)
 {
-    checkTIMEOUT((ControladorLuz *)controlador);
+    checkTIMEOUT(controlador_luz_handler);
 }
+
+/*
+bool botonPresionado()
+{
+    static TiempoMilisegundos ultimoCambio = 0;
+    static bool valorAnterior;
+    bool valorActual = BP_Pin_read(BOTON);
+    bool Presionado = false;
+
+    if (!valorActual && valorAnterior && (getTicks() - ultimoCambio) >= 30)
+    {
+        Presionado = true;
+        ultimoCambio = getTicks();
+    }
+    valorAnterior = valorActual;
+    return Presionado;
+}
+*/
+/*
+static void checkTIMEOUT(ControladorLuz *controlador)
+{
+    Maquina *maquina = (Maquina *)controlador;
+    if (getTicks() == controlador->TO_Boton)
+        Maquina_despacha(maquina, EV_TIMEOUT_BOTON);
+    if (getTicks() == controlador->TO_Luz)
+        Maquina_despacha(maquina, EV_TIMEOUT_LUZ);
+}
+*/
+/*
+void setTimeoutLuz(ControladorLuz *controlador)
+{
+    controlador->TO_Luz = getTicks() + controlador->tiempoLuz;
+}
+void setTimeoutBoton(ControladorLuz *controlador)
+{
+    controlador->TO_Boton = getTicks() + controlador->tiempoBoton;
+}
+*/

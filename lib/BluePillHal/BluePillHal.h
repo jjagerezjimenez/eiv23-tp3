@@ -51,6 +51,6 @@ void BP_delay(uint32_t tiempo);
 
 void setControlador(ControladorLuz *controladorLuz);
 unsigned getTicks(void);
-void set_tick_handler( void *funcion (void));
+void set_tick_handler( void (*funcion) (void));
 
 #endif
