@@ -1,6 +1,7 @@
 #include <BluePillHal.h>
 #include <stm32f1xx.h>
 
+static void (*funcion_ticks)(void) = 0;
 
 void SysTick_Handler(void);
 
@@ -94,8 +95,17 @@ void BP_delay(uint32_t tiempo)
 void SysTick_Handler(void)
 {
     ++ticks;
+    if (funcion_ticks) 
+    {
+        funcion_ticks();
+    }
 }
 
 
+
+void set_tick_handler( void *funcion (void))
+{
+    funcion_ticks = funcion;
+}
 
 unsigned getTicks(void) { return ticks; }
