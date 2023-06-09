@@ -1,10 +1,12 @@
 #include "control_luz.h"
-#include "maquina_impl.h"
+
 #include "BluePillHal.h"
 #include "trace.h"
 
 #define BOTON B12
 #define PIN_LED C13
+
+static void tick_handler (void);
 
 
 // Estados
@@ -133,7 +135,7 @@ void setTimeoutBoton(ControladorLuz *controlador)
 {
     controlador->TO_Boton =  controlador->tiempoBoton;
 }
-static bool procesaAntirreboteBoton(void)
+bool procesaAntirreboteBoton(void)
 {
     enum
     {
@@ -191,7 +193,7 @@ static void checkTIMEOUT (ControladorLuz *controlador)
     }
 }
 
-void tick_handler (void)
+static void tick_handler (void)
 {
     checkTIMEOUT(controlador_luz_handler);
 }

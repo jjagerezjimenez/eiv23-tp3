@@ -8,6 +8,7 @@
         "stdbool.h": "c",
         "stddef.h": "c",
         "control_luz.h": "c",
-        "stm32f100xb.h": "c"
+        "stm32f100xb.h": "c",
+        "stdint.h": "c"
     }
 }

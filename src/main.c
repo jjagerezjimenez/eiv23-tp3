@@ -1,5 +1,5 @@
+#include <stdint.h>
 #include <BluePillHal.h>
-#include "control_luz.h"
 #include "trace.h"
 
 #define BOTON B12

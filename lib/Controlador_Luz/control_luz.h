@@ -1,6 +1,7 @@
 #ifndef CONTROL_LUZ_H
 #define CONTROL_LUZ_H
-#include "maquina.h"
+
+#include "maquina_impl.h"
 
 enum EventoControlador
 {
@@ -55,5 +56,6 @@ void luzOff(void);
 /* IMPLEMENTAR */
 void setTimeoutLuz(ControladorLuz *controlador);
 void setTimeoutBoton(ControladorLuz *controlador);
+bool procesaAntirreboteBoton(void);
 
 #endif
