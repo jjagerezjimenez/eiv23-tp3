@@ -175,23 +175,22 @@ static void checkTIMEOUT (ControladorLuz *controlador)
 {   if (controlador == 0) return;
 
     Maquina *maquina = (Maquina*)controlador;
-    if (controlador->TO_Boton > 1 )
+    if (controlador->TO_Boton > 0 )
     {
-        controlador->TO_Boton --;
+        controlador->TO_Boton --;    
+        if (1 == controlador->TO_Boton )
+        {
+            Maquina_despacha(maquina, EV_TIMEOUT_BOTON);
+        }
     }
-    else if (1 == controlador->TO_Boton )
+    if (controlador->TO_Luz > 0 )
     {
-        controlador->TO_Boton --;
-        Maquina_despacha(maquina, EV_TIMEOUT_BOTON);
-    }
-    if (controlador->TO_Luz > 1 )
-    {
-        controlador->TO_Luz --;
-    }
-    else if (1 == controlador->TO_Luz )
-    {
-        controlador->TO_Luz --;
-        Maquina_despacha(maquina, EV_TIMEOUT_LUZ);
+        controlador->TO_Luz --;    
+        if (1 == controlador->TO_Luz )
+        {
+            controlador->TO_Luz --;
+            Maquina_despacha(maquina, EV_TIMEOUT_LUZ);
+        }
     }
 }
 
